@@ -7,17 +7,20 @@ header {
 
 #home header {
     background: no-repeat lightgray url(Images/cliff_ocean.jpg);
-    background-size: 1500px;
+    background-size: 100%;
+    background-position: center;
 }
 
 #activities header {
     background: no-repeat lightgray url(Images/runfly.jpg);
-    background-size: 1500px;
+    background-size: 100%;
+    background-position: center;
 }
 
 #contact header {
     background: no-repeat lightgray url(Images/cliff_rock.jpg);
-    background-size: 1500px;
+    background-size: 100%;
+    background-position: center;
 }
 
 .main-header {
@@ -76,7 +79,7 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     margin: 3em;
 }
-h2 {
+h1, h2 {
     color: #9ed034;
 }
 
@@ -163,4 +166,114 @@ footer #nondisclaimer .social .fa-instagram {
 footer #nondisclaimer .social .fa-twitter {
     background: #125688;
     color: white;
+}
+
+/* Activities */
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+}
+
+caption {
+    background: #852b1b;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+thead {
+    background: #bde1ff;
+}
+
+tbody {
+    background: #eeffe6;
+    text-align: center;
+}
+
+th, td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852b1b;
+}
+
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #4977D1;
+    color: #fff;
+}
+
+td:first-child {
+    font-weight: bold;
+    background: #bde1ff;
+}
+
+/* Contact */
+
+.contactinfo {
+    line-height: 1.5em;
+}
+.contactinfo span:first-of-type {
+    font-weight: bold;
+}
+
+form {
+    padding-top: 2em;
+}
+
+fieldset {
+    border: solid 2px;
+}
+
+fieldset legend {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+fieldset label{
+    display: block;
+    line-height: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+fieldset .textbox input, fieldset textarea{
+    width: 400px;
+    font-size: 1em;
+    border: solid 2px;
+}
+
+fieldset .radios label, fieldset .selectmenu label {
+    display: inline-flex;
+    padding-right: 1em;
+}
+
+fieldset select {
+    width: 150px;
+    text-align-last: center;
+    border: solid 2px;
+}
+
+fieldset textarea {
+    min-height: 100px;
+}
+
+fieldset .button {
+    padding-left: 307px;
+}
+
+fieldset input[type="submit"] {
+    margin: 10px 0;
+    width: 100px;
+    background: #4977D1;
+    color: #fff;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+fieldset input[type="submit"]:focus, fieldset input[type="submit"]:hover{
+    background: #bde1ff;
+    color: #4977D1 ;
 }
