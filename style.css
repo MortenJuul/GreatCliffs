@@ -7,19 +7,19 @@ header {
 
 #home header {
     background: no-repeat lightgray url(Images/cliff_ocean.jpg);
-    background-size: auto 100%;
+    background-size: 100%;
     background-position: center;
 }
 
 #activities header {
     background: no-repeat lightgray url(Images/runfly.jpg);
-    background-size: auto 100%;
+    background-size: 100%;
     background-position: center;
 }
 
 #contact header {
     background: no-repeat lightgray url(Images/cliff_rock.jpg);
-    background-size: auto 100%;
+    background-size: 100%;
     background-position: center;
 }
 
