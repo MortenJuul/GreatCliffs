@@ -7,19 +7,19 @@ header {
 
 #home header {
     background: no-repeat lightgray url(Images/cliff_ocean.jpg);
-    background-size: 100%;
+    background-size: auto 100%;
     background-position: center;
 }
 
 #activities header {
     background: no-repeat lightgray url(Images/runfly.jpg);
-    background-size: 100%;
+    background-size: auto 100%;
     background-position: center;
 }
 
 #contact header {
     background: no-repeat lightgray url(Images/cliff_rock.jpg);
-    background-size: 100%;
+    background-size: auto 100%;
     background-position: center;
 }
 
@@ -72,6 +72,18 @@ header {
 
 .main-menu ul li.active a {
     color: #fff;
+}
+
+/* Live clock */
+#timeofday {
+    background: linear-gradient(0deg, rgba(251, 215, 139, 1) 0%, rgba(118, 213, 245, 1) 100%);
+    padding: 15px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #3a3a3a;
+}
+#clock {
+    color: #125688;
 }
 
 /* Main */

@@ -23,6 +23,10 @@
                 </nav>
             </div>
         </header>
+        <section id="timeofday">
+            <span>Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
         <main>
             <h2>Introducing California's Greatest Cliffs</h2>
             <h3>What is so unique about California cliffs?</h3>
@@ -56,5 +60,41 @@
             </div>
         </footer>
         </div>
+
+        <!-- JS code -->
+        <script>
+            const currentTime = () => {
+                let d = new Date();
+                let hr = d.getHours();
+                let min = d.getMinutes();
+                let sec = d.getSeconds();
+                let ampm;
+
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                if (min < 10) {
+                    min = "0" + min;
+                }
+
+                if(hr === 12) {
+                    ampm = "PM";
+                } else if (hr > 12) {
+                    hr -= 12;
+                    ampm = "PM"
+                } else {
+                    ampm = "AM"
+                }
+                // Combine to string
+                let time = `${hr}:${min}:${sec} ${ampm}`;
+                // Write time to element
+                document.getElementById("clock").innerText = time;
+                // Run once a second
+                setInterval(currentTime, 1000);
+                
+            }
+            currentTime();
+            
+        </script>
     </body>
 </html> 
