@@ -1,13 +1,19 @@
 let photos = [];
-let fileNames = ["bustour", "cabinrental", "campingadv", "collegetours", "rentalbike", "tourgroup"];
 let imageList = [];
 let image;
 let openList = "<li class='partner'>";
 let  closeList = "</li>";
 
-for (let i = 0; i < 6; i++) {
-    photos.push(`<img src='Images/partners/partner-${fileNames[i]}.png'>`);
-    image = openList + photos[i] + closeList;
-    imageList.push(image);
+let getPartners = (partnerData) => {
+    for (let i = 0; i < 6; i++) {
+        photos.push(`<img src='Images/partners/${partnerData[i].img}' alt='${partnerData[i].alt}'>`);
+        image = openList + photos[i] + closeList;
+        imageList.push(image);
+        
+    }
 }
-document.getElementById("partners").innerHTML = imageList.join("");
+
+fetch("partnerData.json")
+    .then(response => response.json())
+    .then(json => getPartners(json))
+    .finally(i => document.getElementById("partners").innerHTML = imageList.join(""));
