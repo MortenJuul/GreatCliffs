@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
     </head>
     <body id="home">
         <div id="container">
@@ -36,12 +37,12 @@
         </main>
         <section>
             <ul id="partners">
-                <li class="partner"><img src="/Images/partners/partner-bustour.png" alt="Partner Bus Tours"></li>
+                <!-- <li class="partner"><img src="/Images/partners/partner-bustour.png" alt="Partner Bus Tours"></li>
                 <li class="partner"><img src="/Images/partners/partner-cabinrental.png" alt="Partner Cabin Rentals"></li>
                 <li class="partner"><img src="/Images/partners/partner-campingadv.png" alt="Partner Camping Adventure"></li>
                 <li class="partner"><img src="/Images/partners/partner-collegetours.png" alt="Partner Collage Tours"></li>
                 <li class="partner"><img src="/Images/partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
-                <li class="partner"><img src="/Images/partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
+                <li class="partner"><img src="/Images/partners/partner-tourgroup.png" alt="Partner Tour Group"></li> -->
             </ul>
         </section>
         <footer>
@@ -62,42 +63,7 @@
         </div>
 
         <!-- JS code -->
-        <script>
-            const currentTime = () => {
-                let d = new Date();
-                let hr = d.getHours();
-                let min = d.getMinutes();
-                let sec = d.getSeconds();
-                let ampm;
-                let utchr = d.getUTCHours();
-                let timeDiff = Math.abs(hr - utchr);
-                let timeZones = ["PT", "MT", "CT", "ET"];
-                let timeZone = timeZones[timeDiff - 17];
-
-                if (sec < 10) {
-                    sec = "0" + sec;
-                }
-                if (min < 10) {
-                    min = "0" + min;
-                }
-
-                if(hr === 12) {
-                    ampm = "PM";
-                } else if (hr > 12) {
-                    hr -= 12;
-                    ampm = "PM";
-                } else {
-                    ampm = "AM";
-                }
-                // Combine to string
-                let time = `${hr}:${min}:${sec} ${ampm} ${timeZone}`;
-                // Write time to element
-                document.getElementById("clock").innerText = time;
-                // Run once a second
-                setInterval(currentTime, 1000);
-            }
-            currentTime();
-            
-        </script>
+        <script src="clock.js"></script>
+        <script src="partners.js"></script>
     </body>
 </html> 
