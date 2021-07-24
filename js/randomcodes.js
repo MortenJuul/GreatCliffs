@@ -2,7 +2,10 @@ let code = '';
 let getCode = '';
 let btnValue;
 let str = 'ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvxyz0123456789@#$';
+let codebox = document.getElementById("codeentered");
+let submitBtn = document.getElementById("submit")
 
+// Function declaration
 let generateCode = () => {
 
     for (let i = 0; i < 8; i++) {
@@ -12,21 +15,22 @@ let generateCode = () => {
     return code;
 };
 
-document.getElementById("codes").innerHTML = generateCode();
-
-let disableButton = (btnValue = true) => {
-    document.getElementById("submit").disabled = btnValue;
+let disableButton = (btnValue) => {
+    submitBtn.disabled = btnValue;
+    
     if (btnValue == true){
-        document.getElementById("submit").style.backgroundColor = "rgbs(73, 119, 209, 0.3)";
-        document.getElementById("submit").style.color = "rgbs(255, 255, 255, 0.5)";
-    } else {
-        document.getElementById("submit").style.backgroundColor = "rgbs(73, 119, 209, 1)";
-        document.getElementById("submit").style.color = "rgbs(255, 255, 255, 1)";
+        submitBtn.style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+        submitBtn.style.color = "rgba(255, 255, 255, 0.5)";
+        console.log(btnValue);
+    } else if (btnValue == false) {
+        submitBtn.style.backgroundColor = "rgba(73, 119, 209, 1)";
+        submitBtn.style.color = "rgba(255, 255, 255, 1)";
+        console.log(btnValue);
     };
 };
 
 let evaluateCode = () => {
-    getCode = document.getElementById("codeentered").value;
+    getCode = codebox.value;
     let charset1 = getCode.trim();
     let charset2 = code.trim();
     if (charset1.length == charset2.length && charset1 == charset2){
@@ -36,5 +40,8 @@ let evaluateCode = () => {
     };
 };
 
-let codebox = document.getElementById("codeentered");
+// Function Execution
+// Generate random code
+document.getElementById("codes").innerHTML = generateCode();
+// Check if code is entered.
 codebox.addEventListener("input", evaluateCode);
