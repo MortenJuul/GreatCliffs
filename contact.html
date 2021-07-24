@@ -5,8 +5,11 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="js/partners.js"></script>
+        <!-- <script src="js/randomcodes.js"></script> -->
     </head>
-    <body id="contact">
+    <body id="contact" onload="disableButton(true)">
         <div id="container">
         <header>
             <div class="main-header">
@@ -75,8 +78,13 @@
                     <textarea></textarea>
                 </div>
 
+                <div class="randomcode">
+                    <input type="text" name="randomcode" placeholder="Enter Characters" id="codeentered">
+                    <p id="codes"></p>
+                </div>
+
                 <div class="button">
-                    <input type="submit" value="Inquire">
+                    <input id="submit" type="submit" value="Inquire">
                 </div> 
             </fieldset>  
             </form>
@@ -101,6 +109,6 @@
             </div>
         </footer>
         </div>
-        <script src="partners.js"></script>
+        <script src="js/randomcodes.js"></script>
     </body>
 </html> 

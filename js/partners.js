@@ -13,7 +13,7 @@ let getPartners = (partnerData) => {
     }
 }
 
-fetch("partnerData.json")
+fetch("../partnerData.json")
     .then(response => response.json())
     .then(json => getPartners(json))
     .finally(i => document.getElementById("partners").innerHTML = imageList.join(""));
