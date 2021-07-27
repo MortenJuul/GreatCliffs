@@ -223,6 +223,10 @@ td:first-child {
     background: #bde1ff;
 }
 
+.cell-highlight {
+   background-color: #9ed034;
+}
+
 /* Contact */
 
 .contactinfo {
