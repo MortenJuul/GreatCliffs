@@ -51,21 +51,32 @@
                 <div class="textbox">
                     <label>Name:</label> 
                     <input type="text" name="name" placeholder="John Doe">  
-                    <label>Email:</label>  
-                    <input type="email" name="email" placeholder="johndoe@gmail.com"> 
-                    <label>Phone:</label>
-                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
                 </div>
-                
-                <div class="radios">
-                    <label>How should we contact you?</label>  
-                    <input type="radio" name="contact" value="email" checked>Email 
-                    <input type="radio" name="contact" value="phone">Phone
+                    
+                <div class="selectmenu">
+                    <label>How should we contact you?</label>
+                    <select name="contact" id="contact-type">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>  
+                    <!-- <input type="radio" name="contact" value="email" checked>Email 
+                    <input type="radio" name="contact" value="phone">Phone -->
                 </div>
 
+                <div id="contact-method">
+                    <!-- Old -->
+                    <!-- <label>Email:</label>  
+                    <input type="email" id="email-input" name="email" placeholder="johndoe@gmail.com"> 
+                    <label>Phone:</label>
+                    <input type="text" id="phone-input" name="phone" placeholder="xxx-xxx-xxxx">  -->
+
+                </div>
+                    
                 <div class="selectmenu">
                     <label>Which Cliff are you inquiring?</label>  
                     <select>
+                        <option disabled selected value> -- select an option -- </option>
                         <option>West Cliff</option>
                         <option>North Cliff</option>
                         <option>East Cliff</option>
@@ -110,5 +121,6 @@
         </footer>
         </div>
         <script src="js/randomcodes.js"></script>
+        <script src="js/form.js"></script>
     </body>
 </html> 
